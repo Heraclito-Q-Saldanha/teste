@@ -1,0 +1,17 @@
+name: frontend
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Get build version
+      run: echo "UNIXTIME=$(date +'%s')" >> $GITHUB_ENV
+
+    - name: teste
+      run: env
